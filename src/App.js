@@ -17,39 +17,40 @@ const App = ({ setLoading, teacher, stopLoading }) => {
 			stopLoading();
 		}, 1700);
 	}, []);
+
 	let UI;
 	if (teacher.loading) {
 		UI = <Skeleton />;
 	} else {
 		UI = (
-			<Fragment>
-				<div className="page-wrapper">
-					<Header />
-					<Sidebar />
-					<div className="content-wrapper">
-						<div className="page-content fade-in-up">
-							<Switch>
-								<Route path="/" exact component={Dashboard} />
-								<Route path="/about" exact component={Demo} />
-							</Switch>
-						</div>
-						<footer className="page-footer">
-							<div className="font-13">
-								2020 ©
-								<b>HajiriSYSTEM</b> - All rights reserved.
-							</div>
-
-							<div className="to-top">
-								<i className="fa fa-angle-double-up" />
-							</div>
-						</footer>
-					</div>
-					<div className="sidenav-backdrop backdrop" />
-				</div>
-			</Fragment>
+			<Switch>
+				<Route path="/" exact component={Dashboard} />
+				<Route path="/about" exact component={Demo} />
+			</Switch>
 		);
 	}
-	return UI;
+	return (
+		<Fragment>
+			<div className="page-wrapper">
+				<Header />
+				<Sidebar />
+				<div className="content-wrapper">
+					<div className="page-content fade-in-up">{UI}</div>
+					<footer className="page-footer">
+						<div className="font-13">
+							2020 ©
+							<b>HajiriSYSTEM</b> - All rights reserved.
+						</div>
+
+						<div className="to-top">
+							<i className="fa fa-angle-double-up" />
+						</div>
+					</footer>
+				</div>
+				<div className="sidenav-backdrop backdrop" />
+			</div>
+		</Fragment>
+	);
 };
 
 const mapStateToProps = (state) => ({
