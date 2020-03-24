@@ -26,25 +26,25 @@ const App = ({ setLoading, teacher, stopLoading }) => {
 				<div className="page-wrapper">
 					<Header />
 					<Sidebar />
-					<div class="content-wrapper">
-						<div class="page-content fade-in-up">
+					<div className="content-wrapper">
+						<div className="page-content fade-in-up">
 							<Switch>
 								<Route path="/" exact component={Dashboard} />
 								<Route path="/about" exact component={Demo} />
 							</Switch>
 						</div>
-						<footer class="page-footer">
-							<div class="font-13">
+						<footer className="page-footer">
+							<div className="font-13">
 								2020 ©
 								<b>HajiriSYSTEM</b> - All rights reserved.
 							</div>
 
-							<div class="to-top">
-								<i class="fa fa-angle-double-up" />
+							<div className="to-top">
+								<i className="fa fa-angle-double-up" />
 							</div>
 						</footer>
 					</div>
-					<div class="sidenav-backdrop backdrop" />
+					<div className="sidenav-backdrop backdrop" />
 				</div>
 			</Fragment>
 		);

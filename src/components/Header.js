@@ -33,7 +33,7 @@ const Header = () => {
 							<a className="dropdown-item" href="#">
 								<i className="fa fa-cog" />Settings
 							</a>
-							<a className="dropdown-item" href="javascript:;">
+							<a className="dropdown-item">
 								<i className="fa fa-support" />Support
 							</a>
 							<li className="dropdown-divider" />
