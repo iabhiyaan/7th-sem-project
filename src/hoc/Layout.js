@@ -9,7 +9,6 @@ import { setLoading, stopLoading } from "../actions/teacherAction";
 
 const Layout = ({ setLoading, teacher, stopLoading, children }) => {
 	useEffect(() => {
-		setLoading();
 		setTimeout(() => {
 			stopLoading();
 		}, 2700);
