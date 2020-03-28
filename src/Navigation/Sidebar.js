@@ -20,12 +20,12 @@ const Sidebar = () => {
 					<li>
 						<a href="#">
 							<i className="sidebar-item-icon fa fa-bookmark" />
-							<span className="nav-label">Demo</span>
+							<span className="nav-label">Teacher</span>
 							<i className="fa fa-angle-left arrow" />
 						</a>
 						<ul className="nav-2-level collapse">
 							<li>
-								<Link to="/about">Add demo</Link>
+								<Link to="/teacher/create">Add Teacher</Link>
 							</li>
 						</ul>
 					</li>
