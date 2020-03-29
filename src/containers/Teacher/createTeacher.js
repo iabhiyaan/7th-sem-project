@@ -1,7 +1,30 @@
 import React, { Component } from "react";
 
 class createTeacher extends Component {
+	state = {
+		firstName: "",
+		lastName: "",
+		email: ""
+	};
+
+	handleChange = (e) => {
+		this.setState({
+			[e.target.name]: e.target.value
+		});
+	};
+
+	handleSubmit = (e) => {
+		e.preventDefault();
+		this.setState({
+			firstName: "",
+			lastName: "",
+			email: ""
+		});
+		this.props.history.push("/teacher/list");
+	};
+
 	render() {
+		const { firstName, lastName, email } = this.state;
 		return (
 			<div className="row">
 				<div className="col-12">
@@ -15,41 +38,53 @@ class createTeacher extends Component {
 								<a className="dropdown-toggle" data-toggle="dropdown">
 									<i className="fa fa-ellipsis-v" />
 								</a>
-								<div className="dropdown-menu dropdown-menu-right">
-									<a className="dropdown-item">option 1</a>
-									<a className="dropdown-item">option 2</a>
-								</div>
 							</div>
 						</div>
-						<div className="ibox-body" style={{}}>
-							<form>
+						<div className="ibox-body">
+							<form method="POST" onSubmit={this.handleSubmit}>
 								<div className="row">
 									<div className="col-sm-6 form-group">
 										<label>First Name</label>
-										<input className="form-control" type="text" placeholder="First Name" />
+										<input
+											name="firstName"
+											className="form-control"
+											value={firstName}
+											onChange={this.handleChange}
+											type="text"
+											placeholder="First Name"
+										/>
 									</div>
 									<div className="col-sm-6 form-group">
 										<label>Last Name</label>
-										<input className="form-control" type="text" placeholder="First Name" />
+										<input
+											name="lastName"
+											className="form-control"
+											value={lastName}
+											onChange={this.handleChange}
+											type="text"
+											placeholder="Last Name"
+										/>
 									</div>
 								</div>
 								<div className="form-group">
 									<label>Email</label>
-									<input className="form-control" type="text" placeholder="Email address" />
+									<input
+										name="email"
+										className="form-control"
+										value={email}
+										onChange={this.handleChange}
+										type="text"
+										placeholder="Email address"
+									/>
 								</div>
+
 								<div className="form-group">
-									<label>Password</label>
-									<input className="form-control" type="password" placeholder="Password" />
-								</div>
-								<div className="form-group">
-									<label className="ui-checkbox">
-										<input type="checkbox" />
-										<span className="input-span" />Remember me
-									</label>
-								</div>
-								<div className="form-group">
-									<button className="btn btn-default" type="submit">
-										Submit
+									<button
+										onClick={this.handleSubmit}
+										className="btn btn-primary btn-block"
+										type="submit"
+									>
+										Add Teacher
 									</button>
 								</div>
 							</form>

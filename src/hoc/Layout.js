@@ -7,7 +7,13 @@ import Skeleton from "../components/Skeleton/Skeleton";
 
 import { setLoading, stopLoading } from "../actions/teacherAction";
 
-const Layout = ({ setLoading, teacher, stopLoading, children }) => {
+const Layout = ({
+	// eslint-disable-next-line
+	setLoading,
+	teacher,
+	stopLoading,
+	children
+}) => {
 	useEffect(() => {
 		setTimeout(() => {
 			stopLoading();
