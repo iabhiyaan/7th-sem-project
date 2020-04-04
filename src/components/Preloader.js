@@ -1,11 +1,11 @@
 import React from "react";
 
-const Preloader = () => {
+function Preloader() {
 	return (
 		<div className="preloader-backdrop">
 			<div className="page-preloader">Loading</div>
 		</div>
 	);
-};
+}
 
 export default Preloader;

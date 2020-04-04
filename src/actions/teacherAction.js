@@ -1,12 +1,25 @@
 import axios from "axios";
-import { SET_LOADING, STOP_LOADING } from "../types";
+import { SET_LOADING, STOP_LOADING, ADD_TEACHER } from "../types";
 
 // SET loading to TRUE
-export const setLoading = () => ({
-	type: SET_LOADING
-});
+export function setLoading() {
+	return {
+		type: SET_LOADING
+	};
+}
 
 // STOP loading to TRUE
-export const stopLoading = () => ({
-	type: STOP_LOADING
-});
+export function stopLoading() {
+	return {
+		type: STOP_LOADING
+	};
+}
+
+// add teacher
+export function addTeacher(newTeacher) {
+	console.log(newTeacher);
+	return {
+		type: ADD_TEACHER,
+		payload: newTeacher
+	};
+}

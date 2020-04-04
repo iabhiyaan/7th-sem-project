@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const Sidebar = () => {
+function Sidebar() {
 	return (
 		<nav className="page-sidebar" id="sidebar">
 			<div id="sidebar-collapse">
@@ -33,6 +33,6 @@ const Sidebar = () => {
 			</div>
 		</nav>
 	);
-};
+}
 
 export default Sidebar;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Dashboard = () => {
+function Dashboard() {
 	return (
 		<div className="row">
 			<div className="col-lg-3 col-md-6">
@@ -18,6 +18,6 @@ const Dashboard = () => {
 			</div>
 		</div>
 	);
-};
+}
 
 export default Dashboard;

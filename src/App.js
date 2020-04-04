@@ -7,7 +7,7 @@ import createTeacher from "./containers/Teacher/createTeacher";
 import Layout from "./hoc/Layout";
 import "./App.css";
 
-const App = () => {
+function App() {
 	return (
 		<Layout>
 			<Switch>
@@ -17,6 +17,6 @@ const App = () => {
 			</Switch>
 		</Layout>
 	);
-};
+}
 
 export default App;

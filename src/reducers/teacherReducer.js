@@ -1,6 +1,7 @@
-import { SET_LOADING, STOP_LOADING } from "../types";
+import { SET_LOADING, STOP_LOADING, ADD_TEACHER } from "../types";
 
 const initialState = {
+	teachers: [],
 	loading: true
 };
 
@@ -15,6 +16,11 @@ export default (state = initialState, action) => {
 			return {
 				...state,
 				loading: false
+			};
+		case ADD_TEACHER:
+			return {
+				...state,
+				teachers: [ ...state.teachers, action.payload ]
 			};
 		default:
 			return state;

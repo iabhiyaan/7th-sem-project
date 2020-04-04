@@ -1,6 +1,6 @@
 import React from "react";
 import "./Skeleton.scss";
-const Skeleton = ({ marginTop, loadingImage, num }) => {
+function Skeleton({ marginTop, loadingImage, num }) {
 	const loadingBar = [ ...Array(parseInt(num)) ].map((_, i) => (
 		<div key={i} style={loadingImage && { "grid-column-start": "2" }} className="notice--loading__bar" />
 	));
@@ -15,6 +15,6 @@ const Skeleton = ({ marginTop, loadingImage, num }) => {
 			</li>
 		</ul>
 	);
-};
+}
 
 export default Skeleton;

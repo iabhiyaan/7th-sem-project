@@ -7,17 +7,17 @@ import Skeleton from "../components/Skeleton/Skeleton";
 
 import { setLoading, stopLoading } from "../actions/teacherAction";
 
-const Layout = ({
+function Layout({
 	// eslint-disable-next-line
 	setLoading,
 	teacher,
 	stopLoading,
 	children
-}) => {
+}) {
 	useEffect(() => {
 		setTimeout(() => {
 			stopLoading();
-		}, 2700);
+		}, 1000);
 	}, []);
 	return (
 		<div className="page-wrapper">
@@ -39,7 +39,7 @@ const Layout = ({
 			<div className="sidenav-backdrop backdrop" />
 		</div>
 	);
-};
+}
 const mapStateToProps = (state) => ({
 	teacher: state.teacher
 });

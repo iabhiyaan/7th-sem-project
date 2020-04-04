@@ -1,10 +1,18 @@
 import React, { Component } from "react";
 
 import { connect } from "react-redux";
+import Table from "../../components/Teacher/listTeacher";
+
 class listTeacherContainer extends Component {
 	render() {
-		return <div>List of all teachers</div>;
+		return <Table teachers={this.props.allTeachers} />;
 	}
 }
 
-export default connect()(listTeacherContainer);
+function mapStateToProps(state) {
+	return {
+		allTeachers: state.teacher.teachers
+	};
+}
+
+export default connect(mapStateToProps)(listTeacherContainer);

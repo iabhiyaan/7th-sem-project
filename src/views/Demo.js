@@ -1,6 +1,6 @@
 import React from "react";
 
-const Demo = () => {
+function Demo() {
 	return (
 		<div className="row">
 			<div className="col-12">
@@ -57,6 +57,6 @@ const Demo = () => {
 			</div>
 		</div>
 	);
-};
+}
 
 export default Demo;
